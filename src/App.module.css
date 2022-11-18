@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  background-color: black;
+  max-width: 90vmin;
+  min-height: 90vmin;
+  grid-gap: 5px;
+  padding: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+.row > div {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10px;
+}
+
+.row > div > div {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+  word-break: break-word;
+  user-select: none;
+}
+
+.row  div:hover {
+  cursor: pointer;
+}
+
+.row > div.guessed {
+  background-color: gold;
+}
