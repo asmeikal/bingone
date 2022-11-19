@@ -1,12 +1,12 @@
 import React from "react";
-import "./Title.module.css";
+import styles from "./Title.module.css";
 
 const titles = ["Bingone", "B come BINGO", "Molto Molto Bingo"];
 
-const title = titles[Math.floor(Math.random() * titles.length)];
+export const title = titles[Math.floor(Math.random() * titles.length)];
 
 document.title = title;
 
 export function Title() {
-  return <h1>{title}</h1>;
+  return <h1 className={styles.title}>{title}</h1>;
 }

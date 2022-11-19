@@ -1,0 +1,15 @@
+.openButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.modal {
+    overflow: hidden;
+}

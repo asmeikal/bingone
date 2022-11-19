@@ -4,6 +4,7 @@ import { Context, context } from "./game.context";
 import { checkWin } from "./check-win";
 import { rows } from "./setup";
 import { Board } from "./Board";
+import { Instructions } from "./Instructions";
 
 function App() {
   const [clicked, setClicked] = useState<Context["clicks"]>({});
@@ -33,6 +34,7 @@ function App() {
   return (
     <context.Provider value={ctxValue}>
       <Title />
+      <Instructions />
       <Board />
     </context.Provider>
   );
