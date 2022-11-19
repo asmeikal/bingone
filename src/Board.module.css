@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: repeat(var(--size, 5), 1fr);
   background-color: rgb(46, 48, 65);
-  max-width: 90vmin;
+  max-width: 90vw;
   min-height: clamp(70vh, 90vmin, 80vh);
   grid-gap: 5px;
   padding: 10px;
