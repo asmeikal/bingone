@@ -8,10 +8,10 @@ interface RowProps {
 
 export function Row({ row }: RowProps) {
   return (
-    <div className={styles.row}>
+    <section role="application" className={styles.row}>
       {row.map((el) => (
         <Slot value={el} key={el} />
       ))}
-    </div>
+    </section>
   );
 }

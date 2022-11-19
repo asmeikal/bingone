@@ -5,10 +5,10 @@ import { Row } from "./Row";
 
 export function Board() {
   return (
-    <div className={styles.board}>
+    <main className={styles.board}>
       {rows.map((row, idx) => (
         <Row row={row} key={`row-${idx}`} />
       ))}
-    </div>
+    </main>
   );
 }

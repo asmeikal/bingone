@@ -17,8 +17,8 @@ export const Slot = ({ value }: { value: string }) => {
     : undefined;
 
   return (
-    <div className={classnames(styles.slot, className)} onClick={onClick}>
+    <button className={classnames(styles.slot, className)} onClick={onClick}>
       <p>{value}</p>
-    </div>
+    </button>
   );
 };
