@@ -1,4 +1,4 @@
-export const giorgione = [
+export const pieces = [
   "Ci vediamo fra... (gesticola)",
   "Un nonnulla",
   "Una dose generosa",

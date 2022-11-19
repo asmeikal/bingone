@@ -1,0 +1,35 @@
+.slot {
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.slot p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    /*word-break: break-all;*/
+    user-select: none;
+}
+
+.slot:hover {
+    cursor: pointer;
+}
+
+/*.slot:hover, .slot:focus {*/
+/*  position: relative;*/
+/*  transform: scale(1.1);*/
+/*  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);*/
+/*}*/
+
+.slot.guessed {
+    background-color: gold;
+}
+
+.slot.win {
+    background-color: mediumseagreen;
+}
