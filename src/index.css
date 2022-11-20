@@ -1,18 +1,31 @@
 :root {
   --size: 5;
+  --red: rgb(191, 51, 54);
+}
+
+html, body, #root {
+  min-height: 100%;
+  /*overflow: hidden;*/
 }
 
 body {
   margin: 0;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(229, 63, 59);
+  background-color: var(--red);
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: local;
+  background-size: cover;
+}
+
+* {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 #root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }

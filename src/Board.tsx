@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Board.module.css";
-import { rows } from "./setup";
 import { Row } from "./Row";
+import { context } from "./game.context";
 
 export function Board() {
+  const { rows } = useContext(context);
+
   return (
     <main className={styles.board}>
       {rows.map((row, idx) => (

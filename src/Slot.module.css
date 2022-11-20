@@ -6,32 +6,32 @@
     justify-content: center;
     padding: 5px 10px;
     border-radius: 4px;
-    font-family: 'Atkinson Hyperlegible', sans-serif;
-    border: none;
     color: black;
-    font-size: 1.4rem;
 }
 
 .slot p {
     text-overflow: ellipsis;
-    overflow: hidden;
     text-align: center;
-    /*word-break: break-all;*/
     user-select: none;
+    font-size: 2vmax;
+    hyphens: auto;
+}
+
+@media (min-width: 1200px) {
+    .slot p {
+        font-size: 1.4em;
+    }
+}
+
+@media (pointer: fine) {
+    .slot:hover {
+        background-color: ivory;
+    }
 }
 
 .slot:hover {
     cursor: pointer;
 }
-
-.slot:focus {
-}
-
-/*.slot:hover, .slot:focus {*/
-/*  position: relative;*/
-/*  transform: scale(1.1);*/
-/*  box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);*/
-/*}*/
 
 .slot.guessed {
     background-color: gold;

@@ -1,8 +1,7 @@
-import { size } from "./setup";
-
 export function checkWin(
   board: string[][],
-  clicks: { [key: string]: boolean }
+  clicks: { [key: string]: boolean },
+  size: number
 ): string[] {
   // check rows
   for (let row = 0; row < size; row++) {

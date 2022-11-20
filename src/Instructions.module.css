@@ -1,15 +1,53 @@
-.openButton {
+.openButton, .closeButton {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1em;
+    right: 1.4em;
+    color: var(--red);
+    background: white;
+    border-radius: 50%;
+    font-size: 1em;
+    width: 2em;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
 }
 
-.closeButton {
-    position: absolute;
-    top: 0;
-    right: 0;
+.openButton:hover, .closeButton:hover {
+    background-color: black;
+    color: white;
+}
+
+.difficulty {
+    background: none;
+    border: none;
+    color: var(--red);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.difficulty:hover {
+    text-decoration: none;
 }
 
 .modal {
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 900px) {
+    .modal {
+        width: revert;
+        height: revert;
+    }
+}
+
+.modal a {
+    color: var(--red);
+    text-decoration: none;
+}
+
+.modal a:hover {
+    text-decoration: underline;
 }

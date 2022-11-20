@@ -1,4 +1,7 @@
 h1.title {
     color: white;
     text-align: center;
+    font-size: 2em;
+    margin: 2vh;
+    max-width: 50%;
 }

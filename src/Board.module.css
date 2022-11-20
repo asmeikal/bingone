@@ -1,28 +1,37 @@
 .board {
   display: grid;
-  grid-template-rows: repeat(var(--size, 5), 1fr);
+  grid-template-rows: repeat(var(--size), 1fr);
   background-color: rgb(46, 48, 65);
-  max-width: 90vw;
-  min-height: clamp(70vh, 90vmin, 80vh);
+  width: 85vw;
+  height: 100vh;
   grid-gap: 5px;
   padding: 10px;
   border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 5vh;
 }
 
 /* tablet */
 @media (min-width: 600px) {
-
+  .board {
+    height: 90vh;
+  }
 }
 
 /* tablet landscape */
 @media (min-width: 900px) {
-
+  .board {
+    width: 90vw;
+    height: 90vh;
+  }
 }
 
 /* desktop */
 @media (min-width: 1200px) {
   .board {
-    max-width: 80vmin;
+    width: 85vh;
+    height: 85vh;
+    margin-bottom: 0;
   }
 }
 

@@ -1,9 +1,12 @@
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useContext, useRef } from "react";
 import styles from "./Instructions.module.css";
 import { title } from "./Title";
+import { context } from "./game.context";
 
 export function Instructions() {
   const modal = useRef<HTMLDialogElement>(null);
+
+  const { setSize } = useContext(context);
 
   const openModal = useCallback(() => {
     modal.current?.showModal();
@@ -16,11 +19,11 @@ export function Instructions() {
   return (
     <>
       <button className={styles.openButton} onClick={openModal}>
-        Istruzioni
+        ?
       </button>
       <dialog className={styles.modal} ref={modal}>
         <button className={styles.closeButton} onClick={closeModal}>
-          Chiudi
+          X
         </button>
         <h1>Istruzioni</h1>
         <p>
@@ -42,6 +45,26 @@ export function Instructions() {
         <p>
           Vince chi riesce a completare una riga, una colonna, o una diagonale
           per primo.
+        </p>
+        <p>
+          Regola la difficoltà:
+          <ul>
+            <li>
+              <button className={styles.difficulty} onClick={() => setSize(3)}>
+                Facile (3x3)
+              </button>
+            </li>
+            <li>
+              <button className={styles.difficulty} onClick={() => setSize(4)}>
+                Medio (4x4)
+              </button>
+            </li>
+            <li>
+              <button className={styles.difficulty} onClick={() => setSize(5)}>
+                Difficile (5x5)
+              </button>
+            </li>
+          </ul>
         </p>
       </dialog>
     </>
