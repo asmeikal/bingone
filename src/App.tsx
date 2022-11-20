@@ -9,17 +9,19 @@ import { randomize } from "./randomize";
 
 function App() {
   const [size, setSize] = useState(4);
-
-  const rows = useMemo(() => {
-    return randomize(size);
-  }, [size]);
+  const [rows, setRows] = useState(randomize(size));
 
   const [clicked, setClicked] = useState<Context["clicks"]>({});
 
-  useEffect(() => {
-    document.documentElement.style.setProperty("--size", size.toString());
+  const reset = useCallback(() => {
+    setRows(randomize(size));
     setClicked({});
   }, [size]);
+
+  useEffect(() => {
+    reset();
+    document.documentElement.style.setProperty("--size", size.toString());
+  }, [size, reset]);
 
   const winning = useMemo(() => {
     return checkWin(rows, clicked, size);
@@ -41,8 +43,9 @@ function App() {
       winning,
       rows,
       setSize,
+      reset,
     }),
-    [clicked, onClick, winning, rows, setSize]
+    [clicked, onClick, winning, rows, setSize, reset]
   );
 
   return (

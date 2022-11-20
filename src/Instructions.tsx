@@ -16,6 +16,14 @@ export function Instructions() {
     modal.current?.close();
   }, []);
 
+  const updateSize = useCallback(
+    (size: number) => {
+      setSize(size);
+      modal.current?.close();
+    },
+    [setSize]
+  );
+
   return (
     <>
       <button className={styles.openButton} onClick={openModal}>
@@ -46,26 +54,24 @@ export function Instructions() {
           Vince chi riesce a completare una riga, una colonna, o una diagonale
           per primo.
         </p>
-        <p>
-          Regola la difficoltà:
-          <ul>
-            <li>
-              <button className={styles.difficulty} onClick={() => setSize(3)}>
-                Facile (3x3)
-              </button>
-            </li>
-            <li>
-              <button className={styles.difficulty} onClick={() => setSize(4)}>
-                Medio (4x4)
-              </button>
-            </li>
-            <li>
-              <button className={styles.difficulty} onClick={() => setSize(5)}>
-                Difficile (5x5)
-              </button>
-            </li>
-          </ul>
-        </p>
+        <p>Regola la difficoltà:</p>
+        <ul>
+          <li>
+            <button className={styles.difficulty} onClick={() => updateSize(3)}>
+              Facile (3x3)
+            </button>
+          </li>
+          <li>
+            <button className={styles.difficulty} onClick={() => updateSize(4)}>
+              Medio (4x4)
+            </button>
+          </li>
+          <li>
+            <button className={styles.difficulty} onClick={() => updateSize(5)}>
+              Difficile (5x5)
+            </button>
+          </li>
+        </ul>
       </dialog>
     </>
   );

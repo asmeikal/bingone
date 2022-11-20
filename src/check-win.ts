@@ -3,6 +3,10 @@ export function checkWin(
   clicks: { [key: string]: boolean },
   size: number
 ): string[] {
+  if (size > board.length) {
+    return [];
+  }
+
   // check rows
   for (let row = 0; row < size; row++) {
     let rowComplete = true;

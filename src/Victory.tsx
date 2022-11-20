@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useEffect, useRef } from "react";
 import { context } from "./game.context";
 
 export function Victory() {
-  const { winning } = useContext(context);
+  const { winning, reset } = useContext(context);
 
   const modal = useRef<HTMLDialogElement>(null);
 
@@ -12,14 +12,15 @@ export function Victory() {
     }
   }, [winning]);
 
-  const reload = useCallback(() => {
-    window.location.reload();
-  }, []);
+  const playAgain = useCallback(() => {
+    reset();
+    modal.current?.close();
+  }, [reset]);
 
   return (
     <dialog ref={modal}>
       <h1>Hai vinto!</h1>
-      <button onClick={reload}>Gioca di nuovo</button>
+      <button onClick={playAgain}>Gioca di nuovo</button>
     </dialog>
   );
 }

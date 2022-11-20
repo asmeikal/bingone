@@ -6,6 +6,7 @@ export interface Context {
   winning: string[];
   rows: string[][];
   setSize: (size: number) => void;
+  reset: () => void;
 }
 
 export const context = createContext<Context>({
@@ -14,4 +15,5 @@ export const context = createContext<Context>({
   winning: [],
   rows: [],
   setSize: () => {},
+  reset: () => {},
 });
