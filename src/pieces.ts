@@ -15,6 +15,10 @@ export const ingredients = [
   "Salsiccia",
   "Salvia",
   "Pepe",
+  "Pangrattato",
+  "Concentrato di pomodoro",
+  "Vino bianco",
+  "Vino rosso"
 ];
 
 export const rarities = [
@@ -29,6 +33,8 @@ export const rarities = [
   "Una BOUL",
   "Fascia aromatica",
   "Mani da gorilla",
+  "Non scherziamo",
+  "Facciamo uscire gli umori"
 ];
 
 export const everGreen = [
@@ -42,6 +48,7 @@ export const everGreen = [
   "...ce ne mettete di meno",
   "...non ce lo mettete",
   "Laido e corrotto",
+  "Dell'ottimo..."
 ];
 
 export const opinions = [
@@ -57,7 +64,7 @@ export const opinions = [
 
 export const quantities = [
   "Come se piovesse",
-  "Noce di cocco",
+  "Noce di burro",
   "Non serve ma ci sta bene",
   "Spolverata",
   "Un goccetto",
@@ -79,6 +86,7 @@ export const actions = [
   "Smuciniamo",
   "Stritazziamo",
   "Facciamo un test",
+  "Sgrulliamo"
 ];
 
 export const exclamations = [
@@ -93,6 +101,8 @@ export const exclamations = [
   "OH!",
   "POOI!",
   "Stai qui!",
+  "EEEEEEh!",
+  "Vualà!"
 ];
 
 export const noises = [
@@ -101,4 +111,6 @@ export const noises = [
   "(mugugna)",
   "(fischia)",
   "(urla)",
+  "(soffia prima di assaggiare)",
+  "(parla con la bocca piena)"
 ];
